@@ -1,0 +1,1021 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Knit">
+      
+      
+      
+        <link rel="canonical" href="https://sleitnick.github.io/Knit/util/">
+      
+      
+        <meta name="author" content="Stephen Leitnick">
+      
+      <link rel="shortcut icon" href="../img/logo_32.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Util - Knit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="brown" data-md-color-accent="brown">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#signal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://sleitnick.github.io/Knit/" title="Knit" class="md-header-nav__button md-logo" aria-label="Knit">
+      
+  <img src="../img/logo_64.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Knit
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Util
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://sleitnick.github.io/Knit/" title="Knit" class="md-nav__button md-logo" aria-label="Knit">
+      
+  <img src="../img/logo_64.png" alt="logo">
+
+    </a>
+    Knit
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../whyknit/" class="md-nav__link">
+      Why Knit
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../gettingstarted/" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../services/" class="md-nav__link">
+      Services
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../controllers/" class="md-nav__link">
+      Controllers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Util
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Util
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    Signal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread" class="md-nav__link">
+    Thread
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maid" class="md-nav__link">
+    Maid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    Promise
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remoteevent" class="md-nav__link">
+    RemoteEvent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remoteproperty" class="md-nav__link">
+    RemoteProperty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component" class="md-nav__link">
+    Component
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option" class="md-nav__link">
+    Option
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../knitapi/" class="md-nav__link">
+      Knit API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../executionmodel/" class="md-nav__link">
+      Execution Model
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../vscodesnippets/" class="md-nav__link">
+      VS Code Snippets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../examples/" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signal" class="md-nav__link">
+    Signal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread" class="md-nav__link">
+    Thread
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maid" class="md-nav__link">
+    Maid
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promise" class="md-nav__link">
+    Promise
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remoteevent" class="md-nav__link">
+    RemoteEvent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remoteproperty" class="md-nav__link">
+    RemoteProperty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component" class="md-nav__link">
+    Component
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option" class="md-nav__link">
+    Option
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Util</h1>
+                
+                <p>There are some utility modules that come prepackaged with Knit. These are used internally, but are also meant to be accessible to developers.</p>
+<p>These modules are accessible via <code>Knit.Util</code> and must be required, such as <code>require(Knit.Util.Signal)</code>.</p>
+<hr />
+<h2 id="signal"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Signal.lua">Signal</a><a class="headerlink" href="#signal" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Signal.lua">Signal</a> module gives basic Roblox Signal functionality. It is easy to instantiate and use a signal object.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">Signal</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Signal</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">signal</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="n">signal</span><span class="p">:</span><span class="n">Fire</span><span class="p">(...)</span>
+<span class="n">signal</span><span class="p">:</span><span class="n">DisconnectAll</span><span class="p">()</span>
+<span class="n">signal</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+
+<span class="kd">local</span> <span class="n">connection</span> <span class="o">=</span> <span class="n">signal</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(...)</span> <span class="kr">end</span><span class="p">)</span>
+
+<span class="n">connection</span><span class="p">.</span><span class="n">Connected</span>
+<span class="n">connection</span><span class="p">:</span><span class="n">Disconnect</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p>The Connection object internal to the Signal module also has a Destroy method associated with it, so it will still play nicely with the Maid module.</p>
+<hr />
+<h2 id="thread"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Thread.lua">Thread</a><a class="headerlink" href="#thread" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Thread.lua">Thread</a> module aims to replace the somewhat-broken built-in thread functions (such as <code>wait</code>, <code>spawn</code>, and <code>delay</code>), which suffer from throttling.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">Thread</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Thread</span><span class="p">)</span>
+
+<span class="n">Thread</span><span class="p">.</span><span class="n">SpawnNow</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">Spawn</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi&quot;</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">Delay</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello again&quot;</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>DelayRepeat has an optional Behavior parameter, which can be used to switch the behavior between an initial delay (default) or immediate execution before the first delay. For instance, if you want the function to fire immediately before starting the delay loop, use the Immediate behavior:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- Fire the function immediately:</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">,</span> <span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeatBehavior</span><span class="p">.</span><span class="n">Immediate</span><span class="p">)</span>
+
+<span class="c1">-- Fire the function after the first 1 second delay (default behavior):</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">,</span> <span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeatBehavior</span><span class="p">.</span><span class="n">Delayed</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>All of these functions can also be given arguments, as a vararg list at the end of the Thread function call. For instance:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">Thread</span><span class="p">.</span><span class="n">Spawn</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">someMessage</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">someMessage</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">,</span> <span class="n">someMessage</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The caveat with the above is dealing with DelayRepeat, where the behavior must first be defined before the vararg list:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- Will work:</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">,</span> <span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeatBehavior</span><span class="p">.</span><span class="n">Delayed</span><span class="p">,</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+
+<span class="c1">-- Will throw an error as an unknown behavior:</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">DelayRepeat</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">,</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>The Delay and DelayRepeat functions also return an event listener, so they can be cancelled if needed:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">delayConnection</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">.</span><span class="n">Delay</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;ll never see the light of day&quot;</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">)</span>
+
+<span class="n">delayConnection</span><span class="p">:</span><span class="n">Disconnect</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<hr />
+<h2 id="maid"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Maid.lua">Maid</a><a class="headerlink" href="#maid" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Maid.lua">Maid</a> module is a powerful tool for tracking and cleaning up your messes (hence the name). The Maid module was created by <a href="https://github.com/Quenty">James Onnen</a>. Read his <a href="https://medium.com/roblox-development/how-to-use-a-maid-class-on-roblox-to-manage-state-651bf74de98b">tutorial on Maids</a> for a better understanding of how to use it.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">Maid</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Maid</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">maid</span> <span class="o">=</span> <span class="n">Maid</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="c1">-- Give tasks to be cleaned up at a later time:</span>
+<span class="n">maid</span><span class="p">:</span><span class="n">GiveTask</span><span class="p">(</span><span class="n">somePart</span><span class="p">)</span>
+<span class="n">maid</span><span class="p">:</span><span class="n">GiveTask</span><span class="p">(</span><span class="n">something</span><span class="p">.</span><span class="n">SomeEvent</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="kr">end</span><span class="p">))</span>
+<span class="n">maid</span><span class="p">:</span><span class="n">GiveTask</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span> <span class="kr">end</span><span class="p">)</span>
+
+<span class="c1">-- Both Destroy and DoCleaning do the same thing:</span>
+<span class="n">maid</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+<span class="n">maid</span><span class="p">:</span><span class="n">DoCleaning</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p>Any table with a <code>Destroy</code> method can be added to a maid. If you have a bunch of events that you've created for a custom class, using a maid would be good to clean them all up when you're done with the object. Typically a maid will live with the object with which contains the items being tracked.</p>
+<hr />
+<h2 id="promise"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Promise.lua">Promise</a><a class="headerlink" href="#promise" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Promise.lua">Promise</a> module reproduces the behavior of Promises common in web programming, written by <a href="https://github.com/evaera">evaera</a>. Promises are incredibly useful for managing asynchronous flows. Read the <a href="https://eryn.io/roblox-lua-promise/lib/">official documentation</a> for usage.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">Promise</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Promise</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">Fetch</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">Promise</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">resolve</span><span class="p">,</span> <span class="n">reject</span><span class="p">)</span>
+        <span class="kd">local</span> <span class="n">success</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="nb">pcall</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+            <span class="kr">return</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;HttpService&quot;</span><span class="p">):</span><span class="n">GetAsync</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="kr">end</span><span class="p">)</span>
+        <span class="kr">if</span> <span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="kr">then</span>
+            <span class="n">resolve</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="kr">else</span>
+            <span class="n">reject</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">Fetch</span><span class="p">(</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">)</span>
+    <span class="p">:</span><span class="n">Then</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="kr">end</span><span class="p">)</span>
+    <span class="p">:</span><span class="n">Catch</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="n">warn</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+    <span class="kr">end</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<hr />
+<h2 id="remoteevent"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Remote/RemoteEvent.lua">RemoteEvent</a><a class="headerlink" href="#remoteevent" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Remote/RemoteEvent.lua">RemoteEvent</a> module wraps the RemoteEvent object and is used within services and controllers. The only time a developer should ever have to instantiate a RemoteEvent is within the <code>Client</code> table of a service. The behavior differs between the server and the client.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- Server-side</span>
+<span class="kd">local</span> <span class="n">remoteEvent</span> <span class="o">=</span> <span class="n">RemoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">Fire</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="p">...)</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">FireExcept</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="p">...)</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">FireAll</span><span class="p">(...)</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+
+<span class="kd">local</span> <span class="n">connection</span> <span class="o">=</span> <span class="n">remoteEvent</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">functionHandler</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="p">...))</span>
+<span class="n">connection</span><span class="p">:</span><span class="n">IsConnected</span><span class="p">()</span>
+<span class="n">connection</span><span class="p">:</span><span class="n">Disconnect</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- Client side</span>
+<span class="kd">local</span> <span class="n">remoteEvent</span> <span class="o">=</span> <span class="n">RemoteEvent</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">remoteEventObject</span><span class="p">)</span>
+
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">Fire</span><span class="p">(...)</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">Destroy</span><span class="p">()</span>
+
+<span class="kd">local</span> <span class="n">connection</span> <span class="o">=</span> <span class="n">remoteEvent</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">functionHandler</span><span class="p">(...))</span>
+<span class="n">connection</span><span class="p">:</span><span class="n">IsConnected</span><span class="p">()</span>
+<span class="n">connection</span><span class="p">:</span><span class="n">Disconnect</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Knit manages RemoteEvent objects on the client, so developers should never have to instantiate these themselves on the client unless creating completely custom workflows.</p>
+</div>
+<hr />
+<h2 id="remoteproperty"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Remote/RemoteProperty.lua">RemoteProperty</a><a class="headerlink" href="#remoteproperty" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Remote/RemoteProperty.lua">RemoteProperty</a> module wraps a ValueBase object to expose properties to the client from the server. The server can read and write to this object, but the client can only read. This is useful when it's overkill to write a combination of a method and event to replicate data to the client.</p>
+<p>The behavior is slightly different between the server and the client.</p>
+<p>When a RemoteProperty is created on the server, a value must be passed to the constructor. The type of the value will determine the ValueBase chosen. For instance, if a string is passed, it will instantiate a StringValue internally. The server can then set/get this value.</p>
+<p>On the client, a RemoteProperty must be instantiated by giving the ValueBase to the constructor.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- Server-side</span>
+<span class="kd">local</span> <span class="n">property</span> <span class="o">=</span> <span class="n">RemoteProperty</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">property</span><span class="p">:</span><span class="n">Set</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">property</span><span class="p">:</span><span class="n">Replicate</span><span class="p">()</span> <span class="c1">-- Only for table values</span>
+<span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">property</span><span class="p">:</span><span class="n">Get</span><span class="p">()</span>
+<span class="n">property</span><span class="p">.</span><span class="n">Changed</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">newValue</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- Client-side</span>
+<span class="kd">local</span> <span class="n">property</span> <span class="o">=</span> <span class="n">RemoteProperty</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">valueBaseObject</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">property</span><span class="p">:</span><span class="n">Get</span><span class="p">()</span>
+<span class="n">property</span><span class="p">.</span><span class="n">Changed</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">newValue</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition warning">
+<p class="admonition-title">Tables</p>
+<p>When using a table in a RemoteProperty, you <strong><em>must</em></strong> call <code>property:Replicate()</code> server-side after changing a value in the table in order for the changes to replicate to the client. This is necessary because there is no way to watch for changes on a table (unless you clutter it with a bunch of metatables). Calling <code>Replicate</code> will reserialize the value.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Knit manages RemoteProperty objects on the client, so developers should never have to instantiate these themselves on the client unless creating completely custom workflows.</p>
+</div>
+<hr />
+<h2 id="component"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Component.lua">Component</a><a class="headerlink" href="#component" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Component.lua">Component</a> class allows developers to bind custom component classes to in-game objects based on tags provided by the <a href="https://developer.roblox.com/en-us/api-reference/class/CollectionService">CollectionService</a>.</p>
+<p>For instance, a component might be created called <code>DanceFloor</code>, which has the purpose of making a part flash random colors. Here's what our DanceFloor component module might look like:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">DanceFloor</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">DanceFloor</span><span class="p">.</span><span class="n">__index</span> <span class="o">=</span> <span class="n">DanceFloor</span>
+
+<span class="c1">-- How often the color changes:</span>
+<span class="kd">local</span> <span class="n">UPDATE_INTERVAL</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="kr">function</span> <span class="nc">DanceFloor</span><span class="p">.</span><span class="nf">new</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">self</span> <span class="o">=</span> <span class="nb">setmetatable</span><span class="p">({},</span> <span class="n">DanceFloor</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">_nextUpdate</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">UPDATE_INTERVAL</span>
+    <span class="kr">return</span> <span class="n">self</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">DanceFloor</span><span class="p">:</span><span class="nf">HeartbeatUpdate</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">self</span><span class="p">.</span><span class="n">_nextUpdate</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="c1">-- Set the assigned instance to a random color:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_instance</span><span class="p">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span>
+            <span class="nb">math.random</span><span class="p">(),</span>
+            <span class="nb">math.random</span><span class="p">(),</span>
+            <span class="nb">math.random</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_nextUpdate</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_nextUpdate</span> <span class="o">+</span> <span class="n">UPDATE_INTERVAL</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nc">DanceFloor</span><span class="p">:</span><span class="nf">Destroy</span><span class="p">()</span>
+<span class="kr">end</span>
+
+<span class="kr">return</span> <span class="n">DanceFloor</span>
+</code></pre></div>
+</td></tr></table>
+<p>Now the Component module can be used to register the above component:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">Component</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Component</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">DanceFloor</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">somewhere</span><span class="p">.</span><span class="n">DanceFloor</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">danceFloor</span> <span class="o">=</span> <span class="n">Component</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;DanceFloor&quot;</span><span class="p">,</span> <span class="n">DanceFloor</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Lastly, simply assign parts within the game with the <code>DanceFloor</code> tag, and the DanceFloor component will automatically be instantiated for those objects. For editing tags within Studio, check out the <a href="https://www.roblox.com/library/948084095/Tag-Editor">Tag Editor</a> plugin.</p>
+<p>The full API for components is listed within the <a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Component.lua">Component</a> module.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a component needs to be used on both the server and the client, it is recommended to make two separate component modules for each environment. In the above example, we made a DanceFloor. Ideally, such a module should only run on the client, since it is rapidly changing the color of the part at random. Another DanceFloor component could also be created for the server if desired.</p>
+</div>
+<hr />
+<h2 id="option"><a href="https://github.com/Sleitnick/Knit/blob/main/src/Knit/Util/Option.lua">Option</a><a class="headerlink" href="#option" title="Permanent link">&para;</a></h2>
+<p>An Option is a powerful concept taken from <a href="https://doc.rust-lang.org/std/option/index.html">Rust</a> and other languages. The purpose is to represent an optional value. An option can either be <code>Some</code> or <code>None</code>. Using Options helps reduce <code>nil</code> bugs (which can cause silent bugs that can be hard to track down). Options automatically serialize/deserialize across the server/client boundary when passed through services or controllers.</p>
+<p>For full documentation, check out the <a href="https://github.com/Sleitnick/LuaOption">LuaOption</a> repository.</p>
+<p>Using Options is very simple:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">Option</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Option</span><span class="p">)</span>
+
+<span class="c1">-- Returns an Option:</span>
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">DoSomething</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">Random</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">rng</span><span class="p">:</span><span class="n">NextNumber</span><span class="p">()</span>
+    <span class="kr">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="kr">return</span> <span class="n">Option</span><span class="p">.</span><span class="n">Some</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="kr">else</span>
+        <span class="kr">return</span> <span class="n">Option</span><span class="p">.</span><span class="n">None</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Get option value:</span>
+<span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">DoSomething</span><span class="p">()</span>
+
+<span class="c1">-- Match if the value is &#39;some&#39; or &#39;none&#39;:</span>
+<span class="n">value</span><span class="p">:</span><span class="n">Match</span> <span class="p">{</span>
+    <span class="n">Some</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Got value:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">),</span>
+    <span class="n">None</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Got no value&quot;</span><span class="p">)</span> <span class="kr">end</span>
+<span class="p">}</span>
+
+<span class="c1">-- Optionally, use IsSome() and Unwrap():</span>
+<span class="kr">if</span> <span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="n">IsSome</span><span class="p">())</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Got value:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span><span class="n">Unwrap</span><span class="p">())</span>
+<span class="kr">end</span>
+</code></pre></div>
+</td></tr></table>
+<p>Because these are automatically serialized/deserialized in services and controllers, they work great in cases where a returned result is uncertain:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- SERVICE:</span>
+<span class="kd">local</span> <span class="n">MyService</span> <span class="o">=</span> <span class="n">Knit</span><span class="p">.</span><span class="n">CreateService</span> <span class="p">{</span> <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;MyService&quot;</span> <span class="p">}</span>
+<span class="kd">local</span> <span class="n">Option</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Knit</span><span class="p">.</span><span class="n">Util</span><span class="p">.</span><span class="n">Option</span><span class="p">)</span>
+
+<span class="kr">function</span> <span class="nc">MyService</span><span class="p">.</span><span class="nc">Client</span><span class="p">:</span><span class="nf">GetWeapon</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">weaponName</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">weapon</span> <span class="o">=</span> <span class="n">TryToGetWeaponSomehow</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">weaponName</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="p">(</span><span class="n">weapon</span><span class="p">)</span> <span class="kr">then</span>
+        <span class="kr">return</span> <span class="n">Option</span><span class="p">.</span><span class="n">Some</span><span class="p">(</span><span class="n">weapon</span><span class="p">)</span>
+    <span class="kr">else</span>
+        <span class="kr">return</span> <span class="n">Option</span><span class="p">.</span><span class="n">None</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">----</span>
+
+<span class="c1">-- CONTROLLER:</span>
+<span class="kd">local</span> <span class="n">MyController</span> <span class="o">=</span> <span class="n">Knit</span><span class="p">.</span><span class="n">CreateController</span> <span class="p">{</span> <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;MyController&quot;</span> <span class="p">}</span>
+
+<span class="kr">function</span> <span class="nc">MyController</span><span class="p">:</span><span class="nf">KnitStart</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">MyService</span> <span class="o">=</span> <span class="n">Knit</span><span class="p">.</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;MyService&quot;</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">weaponOption</span> <span class="o">=</span> <span class="n">MyService</span><span class="p">:</span><span class="n">GetWeapon</span><span class="p">(</span><span class="s2">&quot;SomeWeapon&quot;</span><span class="p">)</span>
+    <span class="n">weaponOption</span><span class="p">:</span><span class="n">Match</span> <span class="p">{</span>
+        <span class="n">Some</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">weapon</span><span class="p">)</span> <span class="cm">--[[ Do something with weapon ]]</span> <span class="kr">end</span><span class="p">,</span>
+        <span class="n">None</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span> <span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No weapon found&quot;</span><span class="p">)</span> <span class="kr">end</span>
+    <span class="p">}</span>
+<span class="kr">end</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attempting to unwrap an option with no value will throw an error. This is intentional. The purpose is to avoid unhandled <code>nil</code> cases. Whenever calling <code>Unwrap()</code>, be sure that <code>IsSome()</code> was first checked. Using the <code>Match</code> pattern is the easiest way to handle both Some and None cases.</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../controllers/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Controllers
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../knitapi/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Knit API
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/Sleitnick/Knit" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
