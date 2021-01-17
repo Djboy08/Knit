@@ -78,10 +78,10 @@ local Signal = require(script.Parent.Signal)
 local Promise = require(script.Parent.Promise)
 local Thread = require(script.Parent.Thread)
 local TableUtil = require(script.Parent.TableUtil)
+local AttributeWrapper = require(script.AttributeWrapper)
 local CollectionService = game:GetService("CollectionService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
-local HttpService = game:GetService("HttpService")
 
 local IS_SERVER = RunService:IsServer()
 
@@ -272,34 +272,8 @@ function Component:_instanceAdded(instance)
 	local obj = self._class.new(instance)
 	obj._instance = instance
     obj._id = id
-    obj.Attributes = obj.Attributes or {}
-    local mt
-    mt = {
-        ["__index"] = function(table, index) 
-            local attributes = instance:GetAttributes();
-            if attributes[index] then
-                return attributes[index];
-            else
-                return nil;
-            end
-        end,
-        ["__newindex"] = function(table, index, value) 
-            instance:SetAttribute(index, value);
-        end,
-        ["__tostring"] = function(table) 
-            return instance:GetAttributes();
-        end,
-        ["__len"] = function(table) 
-            return #mt["__tostring"](table)
-        end
-        
-    }
-    for i,v in pairs(obj.Attributes) do
-        mt["__newindex"](obj.Attributes, i, v)
-    end
-    obj.Attributes = {}
-    setmetatable(obj.Attributes, mt)
-
+    local defaultAttributes = obj.Attributes and TableUtil.Copy(obj.Attributes) or {}
+    obj.Attributes = AttributeWrapper.new(instance, defaultAttributes)
 	self._instancesToObjects[instance] = obj
 	table.insert(self._objects, obj)
 	if (self._hasInit) then
