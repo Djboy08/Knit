@@ -274,6 +274,7 @@ function Component:_instanceAdded(instance)
     obj._id = id
     local defaultAttributes = obj.Attributes and TableUtil.Copy(obj.Attributes) or {}
     obj.Attributes = AttributeWrapper.new(instance, defaultAttributes)
+    obj._maid:GiveTask(obj.Attributes)
 	self._instancesToObjects[instance] = obj
 	table.insert(self._objects, obj)
 	if (self._hasInit) then
